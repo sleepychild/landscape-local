@@ -21,7 +21,6 @@ STEP "Creating BOSH Director"
 
 bosh create-env "${bosh_deployment}/bosh.yml" \
   --state "${PWD}/state.json" \
-  --var-file "${PWD}/landscape-local-vars.yml"
   --ops-file "${bosh_deployment}/virtualbox/cpi.yml" \
   --ops-file "${bosh_deployment}/virtualbox/outbound-network.yml" \
   --ops-file "${bosh_deployment}/bosh-lite.yml" \
@@ -31,6 +30,12 @@ bosh create-env "${bosh_deployment}/bosh.yml" \
   --ops-file "${bosh_deployment}/use-bionic.yml" \
   --ops-file "${PWD}/landscape-local.yml" \
   --vars-store "${PWD}/creds.yml" \
+  -v director_name=bosh-lite \
+  -v internal_ip=192.168.50.6 \
+  -v internal_gw=192.168.50.1 \
+  -v internal_cidr=192.168.50.0/24 \
+  -v network_name=vboxnet0 \
+  -v outbound_network_name=NatNetwork
 
 
 
