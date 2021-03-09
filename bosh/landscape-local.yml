@@ -1,6 +1,6 @@
 - path: /resource_pools/name=vms/cloud_properties?
   type: replace
   value:
-    cpus: 1
+    cpus: 2
     ephemeral_disk: 16384
-    memory: 768
+    memory: 2048
