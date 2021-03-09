@@ -27,7 +27,7 @@ bosh create-env "${bosh_deployment}/bosh.yml" \
   --ops-file "${bosh_deployment}/uaa.yml" \
   --ops-file "${bosh_deployment}/credhub.yml" \
   --ops-file "${bosh_deployment}/jumpbox-user.yml" \
-  --ops-file "${bosh_deployment}/use-bionic.yml" \
+  --ops-file "${bosh_deployment}/virtualbox/use-bionic.yml" \
   --ops-file "${PWD}/landscape-local.yml" \
   --vars-store "${PWD}/creds.yml" \
   -v director_name=bosh-lite \
