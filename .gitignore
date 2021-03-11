@@ -1,3 +1,8 @@
+# Bosh
+bosh/creds.yml
+bosh/.dev_builds
+bosh/ssh_key
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,0 +1,4 @@
+deployment_name: concourse
+az: az1
+vm_type: default
+network_name: vboxnet0

@@ -36,5 +36,8 @@ bosh create-env \
   -v internal_cidr=192.168.50.0/24 \
   -v network_name=vboxnet0 \
   -v outbound_network_name=NatNetwork \
-  --recreate \
-  --recreate-persistent-disks
+  --recreate
+#  --recreate-persistent-disks
+
+## We need this after we run create-env with --recreate
+ssh-keygen -f ~/.ssh/known_hosts -R "192.168.50.6"
