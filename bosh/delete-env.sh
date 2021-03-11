@@ -12,6 +12,11 @@ echo
 read -p "Continue? [yN] "
 [[ $REPLY =~ ^[Yy]$ ]] || exit 1
 
+####
+STEP "Remove environment alias"
+####
+
+bosh unalias-env vbox
 
 ####
 STEP "Deleting BOSH Director"
@@ -34,3 +39,16 @@ bosh delete-env \
   -v internal_cidr=192.168.50.0/24 \
   -v network_name=vboxnet0 \
   -v outbound_network_name=NatNetwork
+
+####
+STEP "Remove director from known hosts"
+####
+
+ssh-keygen -f ~/.ssh/known_hosts -R "192.168.50.6"
+
+####
+STEP "Delete creds"
+####
+
+rm creds.yml
+rm ssh_key

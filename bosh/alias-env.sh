@@ -49,6 +49,7 @@ bosh \
   --ca-cert <( bosh interpolate "${PWD}/creds.yml" --path /director_ssl/ca ) \
   alias-env vbox
 
+# bosh unalias-env vbox is the command to remove an alias
 
 ####
 STEP "Updating Cloud Config"
