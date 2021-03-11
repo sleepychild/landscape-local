@@ -1,75 +1,75 @@
 {
-    "director_id": "48d13d46-b12a-4a01-6259-de386a00c285",
-    "installation_id": "56113aad-451f-4c12-5cef-41326a1354d3",
-    "current_vm_cid": "vm-c483398d-6b69-489c-6c51-6dc53a71708f",
-    "current_stemcell_id": "b87be12b-f72f-4dba-58a9-775ccd5ae661",
-    "current_disk_id": "39048baf-bfbb-4c7b-4b81-dd4c831733f8",
+    "director_id": "f2dcc7d1-6e7d-4e49-63f7-2c7ee9aab305",
+    "installation_id": "159f0d95-f944-4079-416c-bda13ab61017",
+    "current_vm_cid": "vm-fb5bbb8a-75da-451e-5373-c4db11fa5060",
+    "current_stemcell_id": "298c96a4-8334-4f4b-44e2-a50ba242b635",
+    "current_disk_id": "c42cc7d6-1aff-49bc-6a4f-efe789858ebb",
     "current_release_ids": [
-        "57cab0cf-6c34-40f0-692e-2d8e51293f00",
-        "0d3d3533-d2b4-4344-7759-2489c4194354",
-        "c6bddc36-3d8a-407d-5186-1ac24ae3b94a",
-        "9db64d94-31ed-4fc5-7003-4c2dd57f3af8",
-        "2e292c72-3ce2-44fd-627c-6a3148010827",
-        "c7cc4259-9939-4656-5a7e-15200de5499f",
-        "96c1ca97-b006-4baf-7d08-8f42e0ff889f",
-        "475a36de-6bdd-417a-4b62-7be0b1930db2"
+        "3c756554-5814-40e1-5074-45a99116a083",
+        "ec2ae7b9-a153-4404-6859-4b231300a1ce",
+        "4aae89d2-fb87-411c-7803-ca066d59e3eb",
+        "2ee46336-66c5-497a-4199-5aa0f0319dc8",
+        "fa3d1ffa-a9e5-426c-668a-bdc08585dd43",
+        "78c5423e-ebcc-465a-7d89-88ac36b2f734",
+        "328c570d-2c27-4cb8-79b6-fc1832fb871e",
+        "342caa37-2624-4a9b-4d93-e513edb84065"
     ],
-    "current_manifest_sha": "64ec54ccc51528aa2173c3b6ce2f466a7e1d88de94ab3940be5eb07c93800e3e4b18b3bf598b15ea79da58ec4699097410080184412b2e275f2272887bf88de1",
+    "current_manifest_sha": "71a9fb200ac347961edd9eabe3a2713442a9e2befe7fd8f2168f93997cde279c084265edd243cc087b92c5ee8896c9b3ceab16ba58d3344d5043fd590ad3023a",
     "disks": [
         {
-            "id": "39048baf-bfbb-4c7b-4b81-dd4c831733f8",
-            "cid": "disk-371b9c69-fc66-4728-6d4d-351e708ec56e",
+            "id": "c42cc7d6-1aff-49bc-6a4f-efe789858ebb",
+            "cid": "disk-efad4749-fac1-4763-4b19-f206a94b3308",
             "size": 65536,
             "cloud_properties": {}
         }
     ],
     "stemcells": [
         {
-            "id": "b87be12b-f72f-4dba-58a9-775ccd5ae661",
+            "id": "298c96a4-8334-4f4b-44e2-a50ba242b635",
             "name": "bosh-vsphere-esxi-ubuntu-xenial-go_agent",
             "version": "621.109",
             "api_version": 3,
-            "cid": "sc-4e46bf77-5b6a-4c26-68ee-1cebaafdee39"
+            "cid": "sc-765d7998-b175-421b-7352-aff2f100ca13"
         }
     ],
     "releases": [
         {
-            "id": "57cab0cf-6c34-40f0-692e-2d8e51293f00",
+            "id": "3c756554-5814-40e1-5074-45a99116a083",
             "name": "bosh",
             "version": "271.6.0"
         },
         {
-            "id": "0d3d3533-d2b4-4344-7759-2489c4194354",
+            "id": "ec2ae7b9-a153-4404-6859-4b231300a1ce",
             "name": "bpm",
             "version": "1.1.9"
         },
         {
-            "id": "c6bddc36-3d8a-407d-5186-1ac24ae3b94a",
+            "id": "4aae89d2-fb87-411c-7803-ca066d59e3eb",
             "name": "bosh-virtualbox-cpi",
             "version": "0.2.0"
         },
         {
-            "id": "9db64d94-31ed-4fc5-7003-4c2dd57f3af8",
+            "id": "2ee46336-66c5-497a-4199-5aa0f0319dc8",
             "name": "garden-runc",
             "version": "1.19.19"
         },
         {
-            "id": "2e292c72-3ce2-44fd-627c-6a3148010827",
+            "id": "fa3d1ffa-a9e5-426c-668a-bdc08585dd43",
             "name": "bosh-warden-cpi",
             "version": "41"
         },
         {
-            "id": "c7cc4259-9939-4656-5a7e-15200de5499f",
+            "id": "78c5423e-ebcc-465a-7d89-88ac36b2f734",
             "name": "os-conf",
             "version": "22.1.0"
         },
         {
-            "id": "96c1ca97-b006-4baf-7d08-8f42e0ff889f",
+            "id": "328c570d-2c27-4cb8-79b6-fc1832fb871e",
             "name": "uaa",
             "version": "75.0.0"
         },
         {
-            "id": "475a36de-6bdd-417a-4b62-7be0b1930db2",
+            "id": "342caa37-2624-4a9b-4d93-e513edb84065",
             "name": "credhub",
             "version": "2.9.0"
         }

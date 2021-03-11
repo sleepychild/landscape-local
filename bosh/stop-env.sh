@@ -1,23 +1,25 @@
 #!/bin/bash
 
-set -eu
+set -eu -o pipefail
 
 STEP() { echo ; echo ; echo "==\\" ; echo "===>" "$@" ; echo "==/" ; echo ; }
 
 bosh_deployment="$(cd "$(dirname "${BASH_SOURCE[0]}")"; cd ..; cd bosh-deployment; pwd)"
+bosh_deployment_sha="$(cd "${bosh_deployment}"; git rev-parse --short HEAD)"
 
-echo "This will destroy BOSH from VirtualBox."
-echo
+if [ "${PWD##${bosh_deployment}}" != "${PWD}" ] || [ -e virtualbox/create-env.sh ] || [ -e ../virtualbox/create-env.sh ]; then
+  echo "It looks like you are running this within the ${bosh_deployment} repository."
+  echo "To avoid secrets ending up in this repo, run this from another directory."
+  echo
 
-read -p "Continue? [yN] "
-[[ $REPLY =~ ^[Yy]$ ]] || exit 1
-
+  exit 1
+fi
 
 ####
-STEP "Deleting BOSH Director"
+STEP "Creating BOSH Director"
 ####
 
-bosh delete-env \
+bosh stop-env \
   "${bosh_deployment}/bosh.yml" \
   --state "${PWD}/state.json" \
   --ops-file "${bosh_deployment}/virtualbox/cpi.yml" \
